@@ -1,24 +1,36 @@
+// header.component.ts
 import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  imports: [],
   templateUrl: './header.html',
-  styleUrl: './header.css'
+  styleUrls: ['./header.css']
 })
 export class Header {
- isSticky = false;
+  isMobileNavOpen = false;
+  activeDropdown: string | null = null;
 
-  ngOnInit() {
-    this.updateScroll();
+  toggleMobileNav() {
+    this.isMobileNavOpen = !this.isMobileNavOpen;
   }
 
-  @HostListener('window:scroll')
+  toggleDropdown(dropdown: string) {
+    if (this.activeDropdown === dropdown) {
+      this.activeDropdown = null;
+    } else {
+      this.activeDropdown = dropdown;
+    }
+  }
+
+  @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.updateScroll();
-  }
-
-  updateScroll() {
-    this.isSticky = window.pageYOffset >= 80;
+    const header = document.getElementById('header');
+    if (header) {
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
   }
 }

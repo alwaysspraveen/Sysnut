@@ -12,28 +12,28 @@ export class BuisnessNeed {
 
   cards = [
     {
-      icon: 'assets/images/icons/laptop.png',
+      icon: 'assets/images/icons/renticon.png',
       title: 'Flexible laptops rental service',
       description:
         'For your business needs for short- or long-term projects, Sysnut',
       boxClass: 'back-box-yellow',
     },
     {
-      icon: 'assets/images/icons/amc.png',
+      icon: 'assets/images/icons/trust.png',
       title: 'Honesty and superior service',
       description:
         'Annual Maintenance Contract: We offer comprehensive IT Hardware',
       boxClass: 'back-box-red',
     },
     {
-      icon: 'assets/images/icons/lan.png',
+      icon: 'assets/images/icons/professionals.png',
       title: 'Highly skilled and professionals',
       description:
         'Our professional IT Networking solution is available for routing,',
       boxClass: 'back-box-cyan',
     },
     {
-      icon: 'assets/images/icons/manpower.png',
+      icon: 'assets/images/icons/percentage.png',
       title: 'All IT needs at one roof',
       description:
         'The market is filled with different IT services. But while each of',
@@ -49,4 +49,3 @@ export class BuisnessNeed {
     this.hoveredCardIndex = null;
   }
 }
-

@@ -21,27 +21,6 @@ $(function () {
   updateScroll();
 });
 
-//home slider
-$(window).on("load", function () {
-  var owl = $(".review-slider");
-  owl.owlCarousel({
-    items: 1,
-    nav: false,
-    dots: false,
-    autoplay: false,
-    loop: true,
-    autoplayHoverPause: true,
-    smartSpeed: 1000,
-    mouseDrag: false,
-  });
-  // Custom html Button
-  $(".customNextBtn").click(function () {
-    owl.trigger("next.owl.carousel");
-  });
-  $(".customPreviousBtn").click(function () {
-    owl.trigger("prev.owl.carousel");
-  });
-});
 
 //hero logo slider
 $(window).on("load", function () {
@@ -282,3 +261,64 @@ $(document).ready(function () {
     $("#addressblock-3").hide();
   });
 });
+
+   // Header scroll effect
+        const header = document.getElementById('header');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        let isMenuOpen = false;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        mobileToggle.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            mobileNav.classList.toggle('active');
+            
+            const icon = mobileToggle.querySelector('i');
+            icon.className = isMenuOpen ? 'fas fa-times' : 'fas fa-bars';
+        });
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(id) {
+            event.preventDefault();
+            const dropdown = document.getElementById(id);
+            dropdown.classList.toggle('active');
+            
+            const icon = event.target.querySelector('i');
+            if (dropdown.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!header.contains(e.target) && isMenuOpen) {
+                isMenuOpen = false;
+                mobileNav.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                icon.className = 'fas fa-bars';
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });

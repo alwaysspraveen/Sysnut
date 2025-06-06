@@ -39,7 +39,6 @@
               "src/assets/js/min.plugin.js",
               "src/assets/js/parallax.min.js",
               "src/assets/js/portfolio.js",
-              "src/assets/js/roundscroll.js",
               "src/assets/js/scrollloop.min.js",
               "src/assets/js/timeline.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"

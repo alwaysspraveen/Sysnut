@@ -11,31 +11,19 @@ import { Header } from './header/header';
 import { Footer } from './footer/footer';
 import { Services } from './services/services';
 import { BuisnessNeed } from './buisness-need/buisness-need';
+import { Carousel } from "./carousel/carousel";
+import { HeroBanner } from "./hero-banner/hero-banner";
 
 declare var $: any; // Let Angular know jQuery is used
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, Footer, Services, BuisnessNeed],
+  imports: [Header, Footer, Services, BuisnessNeed, Carousel, HeroBanner],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App implements OnInit, AfterViewInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
-  ngAfterViewInit(): void {
-    this.startRotation();
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      items: 1,
-    });
-  }
-
+export class App {
   protected title = 'Sysnut';
 
   @HostListener('window:scroll', [])
