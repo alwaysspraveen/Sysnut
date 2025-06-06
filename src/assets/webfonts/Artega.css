@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Artega';
+    src: url('Artega.eot');
+    src: url('Artega.eot?#iefix') format('embedded-opentype'),
+         url('Artega.woff2') format('woff2'),
+         url('Artega.woff') format('woff'),
+         url('Artega.ttf')  format('truetype'),
+         url('Artega.svg#Artega') format('svg');
+}

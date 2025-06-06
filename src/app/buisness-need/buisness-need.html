@@ -1,0 +1,28 @@
+<div class="service-container">
+  <div class="service-parent" *ngFor="let card of cards; let i = index">
+    <div
+      class="service-card"
+      (mouseenter)="onMouseEnter(i)"
+      (mouseleave)="onMouseLeave()"
+    >
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div class="icon">
+          <img [src]="card.icon" alt="Icon" />
+        </div>
+        <p class="title">{{ card.title }}</p>
+        <p class="description">{{ card.description }}</p>
+      </div>
+      <div
+        style="display: flex; justify-content: start; align-items: center; gap: 12px"
+      >
+        <div><a class="explore" href="#">Read More</a></div>
+        <i class="fa-solid fa-angle-right" style="height: 14px"></i>
+      </div>
+    </div>
+    <div
+      class="back-box"
+      [ngClass]="card.boxClass"
+      [class.visible]="hoveredCardIndex === i"
+    ></div>
+  </div>
+</div>
