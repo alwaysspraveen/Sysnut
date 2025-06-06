@@ -1,7 +1,7 @@
 <header class="header" id="header">
   <div class="header-container">
     <a href="#" class="logo">
-      <img src="assets/images/logo-dark.png">
+      <img src="assets/images/logo-dark.png" />
     </a>
 
     <!-- Desktop Navigation -->
@@ -63,10 +63,17 @@
         <a href="#" class="mobile-nav-link">About Us</a>
       </li>
       <li class="mobile-nav-item">
-        <a href="#" class="mobile-nav-link" (click)="toggleDropdown('services')">
+        <a
+          href="#"
+          class="mobile-nav-link"
+          (click)="toggleDropdown('services')"
+        >
           Services <i class="fas fa-chevron-down"></i>
         </a>
-        <div class="mobile-dropdown" [class.active]="activeDropdown === 'services'">
+        <div
+          class="mobile-dropdown"
+          [class.active]="activeDropdown === 'services'"
+        >
           <a href="#" class="mobile-dropdown-item">Laptop Rentals</a>
           <a href="#" class="mobile-dropdown-item">AMC Services</a>
           <a href="#" class="mobile-dropdown-item">LAN Networking</a>
@@ -74,12 +81,21 @@
         </div>
       </li>
       <li class="mobile-nav-item">
-        <a href="#" class="mobile-nav-link" (click)="toggleDropdown('products')">
+        <a
+          href="#"
+          class="mobile-nav-link"
+          (click)="toggleDropdown('products')"
+        >
           Products <i class="fas fa-chevron-down"></i>
         </a>
-        <div class="mobile-dropdown" [class.active]="activeDropdown === 'products'">
+        <div
+          class="mobile-dropdown"
+          [class.active]="activeDropdown === 'products'"
+        >
           <a href="#" class="mobile-dropdown-item">Brand New Laptops</a>
-          <a href="#" class="mobile-dropdown-item">Certified Refurbished Laptops</a>
+          <a href="#" class="mobile-dropdown-item"
+            >Certified Refurbished Laptops</a
+          >
           <a href="#" class="mobile-dropdown-item">All IT Products</a>
           <a href="#" class="mobile-dropdown-item">Accessories</a>
           <a href="#" class="mobile-dropdown-item">LAN Networking Products</a>
