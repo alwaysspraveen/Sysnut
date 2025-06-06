@@ -19,14 +19,14 @@
             "assets": ["src/assets", "src/favicon.ico"],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-              "src/assets/CSS/bootstrap.min.css",
-              "src/assets/CSS/style.css",
-              "src/assets/CSS/all.css",
-              "src/assets/CSS/theme.css",
-              "src/assets/CSS/responsive.css",
-              "src/assets/CSS/timeline.min.css",
-              "src/assets/CSS/cookieconsent.css",
-              "src/assets/CSS/css.plugin.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/style.css",
+              "src/assets/css/all.css",
+              "src/assets/css/theme.css",
+              "src/assets/css/responsive.css",
+              "src/assets/css/timeline.min.css",
+              "src/assets/css/cookieconsent.css",
+              "src/assets/css/css.plugin.css",
               "src/styles.css"
             ],
             "scripts": [

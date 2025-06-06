@@ -3,7 +3,6 @@ import {
   HostListener,
   AfterViewInit,
   OnInit,
-  ViewChild,
   ElementRef,
   ViewChildren,
   QueryList,
@@ -11,7 +10,7 @@ import {
 import { Header } from './header/header';
 import { Footer } from './footer/footer';
 import { Services } from './services/services';
-import { BuisnessNeed } from "./buisness-need/buisness-need";
+import { BuisnessNeed } from './buisness-need/buisness-need';
 
 declare var $: any; // Let Angular know jQuery is used
 
@@ -26,6 +25,7 @@ export class App implements OnInit, AfterViewInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
+
   ngAfterViewInit(): void {
     this.startRotation();
     $('.owl-carousel').owlCarousel({
