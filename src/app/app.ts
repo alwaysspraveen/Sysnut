@@ -12,14 +12,13 @@ import { Footer } from './footer/footer';
 import { Services } from './services/services';
 import { BuisnessNeed } from './buisness-need/buisness-need';
 import { Carousel } from "./carousel/carousel";
-import { HeroBanner } from "./hero-banner/hero-banner";
 
 declare var $: any; // Let Angular know jQuery is used
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, Footer, Services, BuisnessNeed, Carousel, HeroBanner],
+  imports: [Header, Footer, Services, BuisnessNeed, Header, Carousel],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

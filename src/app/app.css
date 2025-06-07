@@ -19,10 +19,10 @@
 .cd-words-wrapper b.is-hidden {
   opacity: 0;
 }
-.cd-words-wrapper{
-    width: 190px;
+.cd-words-wrapper {
+  width: 190px;
 }
 
-#why{
-  background-image: url('/src/assets/images/');
+#why {
+  background-image: url("/src/assets/images/");
 }
