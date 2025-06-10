@@ -1,19 +1,33 @@
-import { Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
-import { Footer } from "../../app/footer/footer";
-import { BuisnessNeed } from "../../app/buisness-need/buisness-need";
-import { Services } from "../../app/services/services";
-import { Carousel } from "../../app/carousel/carousel";
-import { Header } from "../../app/header/header";
-import { WhoWeAre } from "../../app/who-we-are/who-we-are";
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
+import { Footer } from '../../app/Components/footer/footer';
+import { BuisnessNeed } from '../../app/Components/buisness-need/buisness-need';
+import { Services } from '../../app/Components/services/services';
+import { Carousel } from '../../app/Components/carousel/carousel';
+import { WhoWeAre } from '../../app/Components/who-we-are/who-we-are';
+import { Header } from '../../app/Components/header/header';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [Footer, BuisnessNeed, Services, Carousel, Header, WhoWeAre],
+  imports: [
+    Footer,
+    BuisnessNeed,
+    Services,
+    Carousel,
+    Header,
+    WhoWeAre,
+    Services,
+  ],
   templateUrl: './dashboard.html',
-  styleUrl: './dashboard.css'
+  styleUrl: './dashboard.css',
 })
 export class Dashboard {
- @HostListener('window:scroll', [])
+  @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollY = window.scrollY || window.pageYOffset;
 

@@ -1,0 +1,101 @@
+<header class="header" id="header">
+  <div class="header-container">
+    <a href="#" class="logo">
+      <img src="assets/images/logo-dark.png" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            Services <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-item">Cloud Infrastructure Consulting</a>
+            <a href="#" class="dropdown-item">Disaster Recovery & Business Continuity</a>
+            <a href="#" class="dropdown-item">Network Design & Optimization</a>
+            <a href="#" class="dropdown-item">Server & Storage Solutions</a>
+            <a href="#" class="dropdown-item">End-User Computing & Support</a>
+            <a href="#" class="dropdown-item">Hardware & Software Procurement</a>
+            <a href="#" class="dropdown-item">Web Development</a>
+            <a href="#" class="dropdown-item">Business Automation</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Call to Action + Mobile Toggle -->
+    <div class="cta-section">
+      <a href="#" class="cta-button">
+        <span>Get in Touch</span>
+      </a>
+      <button class="mobile-toggle" (click)="toggleMobileNav()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" [class.active]="isMobileNavOpen">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link">About Us</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a
+          href="#"
+          class="mobile-nav-link"
+          (click)="toggleDropdown('services')"
+        >
+          Services <i class="fas fa-chevron-down"></i>
+        </a>
+        <div
+          class="mobile-dropdown"
+          [class.active]="activeDropdown === 'services'"
+        >
+          <a href="#" class="mobile-dropdown-item">Laptop Rentals</a>
+          <a href="#" class="mobile-dropdown-item">AMC Services</a>
+          <a href="#" class="mobile-dropdown-item">LAN Networking</a>
+          <a href="#" class="mobile-dropdown-item">IT Manpower Support</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item">
+        <a
+          href="#"
+          class="mobile-nav-link"
+          (click)="toggleDropdown('products')"
+        >
+          Products <i class="fas fa-chevron-down"></i>
+        </a>
+        <div
+          class="mobile-dropdown"
+          [class.active]="activeDropdown === 'products'"
+        >
+          <a href="#" class="mobile-dropdown-item">Brand New Laptops</a>
+          <a href="#" class="mobile-dropdown-item"
+            >Certified Refurbished Laptops</a
+          >
+          <a href="#" class="mobile-dropdown-item">All IT Products</a>
+          <a href="#" class="mobile-dropdown-item">Accessories</a>
+          <a href="#" class="mobile-dropdown-item">LAN Networking Products</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</header>
