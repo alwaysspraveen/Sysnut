@@ -1,0 +1,18 @@
+<div
+  class="custom-carousel-wrapper"
+>
+  <div class="custom-carousel-track" #carouselTrack>
+    <div class="iconslider" *ngFor="let item of duplicatedBrands">
+      <div class="icon-with-title">
+        <a href="javascript:void(0)">
+          <div class="iwt-icon">
+            <img [src]="item.logo" [alt]="item.name" />
+          </div>
+          <div class="iwt-content">
+            <p>{{ item.name }}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
