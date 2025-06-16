@@ -1,0 +1,37 @@
+<div class="carousel-container">
+  <div
+    class="carousel-wrapper"
+    [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+  >
+    <img
+      *ngFor="let img of images"
+      [src]="img"
+      alt="Image"
+      class="carousel-image"
+    />
+  </div>
+
+  <!-- Static Text Overlay with CTA -->
+  <div class="carousel-overlay text-block">
+    <h1>
+      <span class="brand">Sysnut Technologies</span> Simplified <br />
+      <strong>IT Support</strong> for all types of <br />
+      businesses
+    </h1>
+
+    <div class="cta-buttons">
+      <button class="btn-primary">Get Started</button>
+      <button class="btn-secondary" href="#">How It Works</button>
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div class="dots">
+    <span
+      *ngFor="let img of images; let i = index"
+      [class.active]="i === currentIndex"
+      (click)="goToSlide(i)"
+    >
+    </span>
+  </div>
+</div>

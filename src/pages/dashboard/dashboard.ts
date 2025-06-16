@@ -11,6 +11,7 @@ import { Services } from '../../app/Components/services/services';
 import { Carousel } from '../../app/Components/carousel/carousel';
 import { WhoWeAre } from '../../app/Components/who-we-are/who-we-are';
 import { Header } from '../../app/Components/header/header';
+import { HeroBanner } from "../../app/Components/hero-banner/hero-banner";
 
 @Component({
   selector: 'app-dashboard',
@@ -22,7 +23,8 @@ import { Header } from '../../app/Components/header/header';
     Header,
     WhoWeAre,
     Services,
-  ],
+    HeroBanner
+],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
