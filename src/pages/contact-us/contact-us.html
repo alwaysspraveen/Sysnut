@@ -48,10 +48,12 @@
             <div class="contactnumberdiv">
               <p class="mb15 linktitle">We're Available 24/7.</p>
               <a href="#"
-                ><i class="fa-solid fa-envelope mr10"></i> support sysnut.com</a
+                ><i class="fa-solid fa-envelope mr10"></i>
+                support&#64;sysnut.com</a
               >
               <a href="#"
-                ><i class="fa-solid fa-envelope mr10"></i> support sysnut.com</a
+                ><i class="fa-solid fa-envelope mr10"></i>
+                admin&#64;sysnut.com</a
               >
             </div>
           </div>
@@ -88,16 +90,17 @@
     <div class="row justify-content-center mt40">
       <div class="col-lg-10">
         <div class="form-block">
-          <form action="#" id="contactform" method="post">
+          <form (ngSubmit)="sendEmail()" #contactForm="ngForm">
             <div class="fieldsets row">
               <div class="col-md-6 form-group floating-label">
                 <input
                   type="text"
                   placeholder=" "
-                  required="required"
+                  required
                   id="name"
                   class="floating-input"
-                  name="fullname"
+                  name="name"
+                  [(ngModel)]="form.name"
                 />
                 <label>Your Name*</label>
               </div>
@@ -105,32 +108,36 @@
                 <input
                   type="tel"
                   placeholder=" "
-                  required="required"
+                  required
                   id="mobile_number"
                   class="floating-input"
-                  name="mobile_number"
+                  name="mobile"
+                  [(ngModel)]="form.mobile"
                 />
                 <label>Mobile Number*</label>
               </div>
             </div>
+
             <div class="fieldsets row">
               <div class="col-md-6 form-group floating-label">
                 <input
                   type="email"
                   placeholder=" "
-                  required="required"
+                  required
                   id="email"
                   class="floating-input"
                   name="email"
+                  [(ngModel)]="form.email"
                 />
                 <label>Email Address*</label>
               </div>
               <div class="col-md-6 form-group floating-label">
                 <select
-                  required="required"
+                  required
                   id="interested_in"
                   class="floating-select"
-                  name="interested_in"
+                  name="interest"
+                  [(ngModel)]="form.interest"
                 >
                   <option value="">&nbsp;</option>
                   <option value="Graphic Design">Graphic Design</option>
@@ -141,21 +148,24 @@
                 <label>Interested In*</label>
               </div>
             </div>
+
             <div class="fieldsets row">
               <div class="col-md-12 form-group floating-label">
                 <textarea
                   placeholder=" "
-                  required="required"
+                  required
                   id="description"
                   class="floating-input"
-                  name="description"
+                  name="message"
+                  [(ngModel)]="form.message"
                 ></textarea>
                 <label>Brief about the project*</label>
               </div>
             </div>
+
             <div class="formfooter">
               <div class="fieldsets">
-                <button type="submit" name="submit" class="r-g-btn r-g-btn-1">
+                <button type="submit" class="r-g-btn r-g-btn-1">
                   <span>Submit</span>
                 </button>
               </div>
@@ -165,13 +175,12 @@
                   class="custom-control-input"
                   id="agree"
                   name="agree"
-                  checked="checked"
+                  checked
                 />
-                <label class="custom-control-label ctmlabl" for="agree"
-                  >By clicking here, I state that I have read and understood the
-                  <a href="javascript:void(0)">Terms &amp; Conditions</a
-                  >.</label
-                >
+                <label class="custom-control-label ctmlabl" for="agree">
+                  By clicking here, I state that I have read and understood the
+                  <a href="#">Terms &amp; Conditions</a>.
+                </label>
               </div>
             </div>
           </form>

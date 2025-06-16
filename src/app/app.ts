@@ -11,5 +11,5 @@ declare var $: any; // Let Angular know jQuery is used
   styleUrl: './app.css',
 })
 export class App {
-  protected title = 'Sysnut';
+   title = 'Sysnut';
 }
